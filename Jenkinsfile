@@ -1,11 +1,6 @@
 pipeline {
   agent { label 'master' }
   stages {
-    stage('Checkout Code') { // Get code
-      steps {
-        git 'https://github.com/rjs5613/vertx-starter-web'
-      }
-    }
     stage('Run Test') {
       steps {
         sh "./gradlew test"
